@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Meu DrivenEats</title>
+
+    <link rel="stylesheet" href="Style/reset.css" />
+    <link rel="stylesheet" href="Style/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </head>
+  <body>
+    <header>
+        <h1>DrivenEats</h1>
+        <p>Sua comida em 6 minutos</p>
+    </header>
+
+    <div class="main-content">
+
+      <!-- DISHES -->
+      <p>Primeiro, seu prato</p>
+      <div class="items-box dishes" data-test="dishes">
+        <!--food-item-1-->
+        <div class="item" data-test="food-option" onclick="selectDish(this)">
+          <img src="Images/dishes/food-1.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">X-Economia</p>
+            <p class="description">Pra matar a fome</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 10,00</p>
+            </div>
+          </div>
+        </div>
+        <!--food-item-2-->
+        <div class="item" data-test="food-option" onclick="selectDish(this)">
+          <img src="Images/dishes/food-2.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">X-Egg Bacon</p>
+            <p class="description">Um pouco de tudo</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 12,00</p>
+            </div>
+          </div>
+        </div>
+        <!--food-item-3-->
+        <div class="item" data-test="food-option" onclick="selectDish(this)">
+          <img src="Images/dishes/food-3.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">X-Super Bacon</p>
+            <p class="description">Bacon e mais bacon</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 14,00</p>
+            </div>
+          </div>
+        </div>
+        <!--food-item-4-->
+        <div class="item" data-test="food-option" onclick="selectDish(this)">
+          <img src="Images/dishes/food-4.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">Arrebenta Tudo</p>
+            <p class="description">Muito bacon e cheddar</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 16,00</p>
+            </div>
+          </div>
+        </div>
+        <!--food-item-5-->
+        <div class="item" data-test="food-option" onclick="selectDish(this)">
+          <img src="Images/dishes/food-5.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">Desafio</p>
+            <p class="description">Tão grande que nem cabe na foto</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 20,00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--BEBIDAS-->
+      <p>Agora, sua bebida</p>
+      <div class="items-box drinks" data-test="drinks">
+        <!--drink-item-1-->
+        <div class="item" data-test="food-option" onclick="selectDrink(this)">
+          <img src="Images/drinks/drink-1.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">Coca Cola</p>
+            <p class="description">Lata 350ml</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 5,50</p>
+            </div>
+          </div>
+        </div>
+        <!--drink-item-2-->
+        <div class="item" data-test="food-option" onclick="selectDrink(this)">
+          <img src="Images/drinks/drink-2.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">Fanta Laranja</p>
+            <p class="description">Lata 350ml</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 5,00</p>
+            </div>
+          </div>
+        </div>
+        <!--drink-item-3-->
+        <div class="item" data-test="food-option" onclick="selectDrink(this)">
+          <img src="Images/drinks/drink-3.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">Bohemia</p>
+            <p class="description">Latão 473ml</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 6,00</p>
+            </div>
+          </div>
+        </div>
+        <!--drink-item-4-->
+        <div class="item" data-test="food-option" onclick="selectDrink(this)">
+          <img src="Images/drinks/drink-4.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">Eisenbahn</p>
+            <p class="description">Latão 473ml</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 7,00</p>
+            </div>
+          </div>
+        </div>
+        <!--drink-item-5-->
+        <div class="item" data-test="food-option" onclick="selectDrink(this)">
+          <img src="Images/drinks/drink-5.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">Budweiser</p>
+            <p class="description">Latão 473ml</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 6,50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--SOBREMESA-->
+      <p>Por fim, sua sobremesa</p>
+      <div class="items-box desserts" data-test="desserts">
+        <!--dessert-item-1-->
+        <div class="item" data-test="food-option" onclick="selectDessert(this)">
+          <img src="Images/desserts/dessert-1.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">Brownie</p>
+            <p class="description">Sabor chocolate</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 5,00</p>
+            </div>
+          </div>
+        </div>
+        <!--dessert-item-2-->
+        <div class="item" data-test="food-option" onclick="selectDessert(this)">
+          <img src="Images/desserts/dessert-2.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">Mousse</p>
+            <p class="description">Sabor chocolate</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 5,50</p>
+            </div>
+          </div>
+        </div>
+        <!--dessert-item-3-->
+        <div class="item" data-test="food-option" onclick="selectDessert(this)">
+          <img src="Images/desserts/dessert-3.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">Cheese Cake</p>
+            <p class="description">Sabor maracujá</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 8,00</p>
+            </div>
+          </div>
+        </div>
+        <!--dessert-item-4-->
+        <div class="item" data-test="food-option" onclick="selectDessert(this)">
+          <img src="Images/desserts/dessert-4.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">Bolo</p>
+            <p class="description">Sabor morango</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 7,00</p>
+            </div>
+          </div>
+        </div>
+        <!--dessert-item-5-->
+        <div class="item" data-test="food-option" onclick="selectDessert(this)">
+          <img src="Images/desserts/dessert-5.jpg" alt="">
+          <div>
+            <p class="name" data-test="food-title">Donuts</p>
+            <p class="description">Para crianças</p>
+            <div class="item-bottom">
+              <p class="price" data-test="food-price">R$ 6,00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="purchase-container">
+      <button id="button" data-test="finish-button" onclick="sendOrder()" disabled>
+        Selecione os 3 itens<br>
+        para fechar o pedido</button>
+    </div>
+
+    <script src="Script/script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </body>
+</html>
