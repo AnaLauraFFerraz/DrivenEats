@@ -61,16 +61,21 @@ function finishButton(){
 
 function sendOrder() {
 
-    let message = "Olá, gostaria de fazer o pedido:/n" 
-    message += "- Prato: " + checkDishes.querySelector("name").innerHTML + "/n" 
-    message += "- Bebida: " + checkDrinks.querySelector("name").innerHTML + "/n" 
-    message += "- Sobremesa: " + checkDesserts.querySelector("name").innerHTML + "/n";
+    let message = "Olá, gostaria de fazer o pedido:\n" 
+    message += "- Prato: " + checkDishes.getElementsByClassName("name")[0].innerHTML + "\n" 
+    message += "- Bebida: " + checkDrinks.getElementsByClassName("name")[0].innerHTML + "\n" 
+    message += "- Sobremesa: " + checkDesserts.getElementsByClassName("name")[0].innerHTML + "\n";
     
-    /*
-    encodeURIComponent(message);
-    window.open()
-    //https://wa.me/?text=urlencodedtext
-    */
-    alert(message);
+    let dishPrice = Number(checkDishes.getElementsByClassName("item-bottom")[0].children[0].innerHTML.replace('R$', '').replace(",","."));
+    let drinkPrice = Number(checkDrinks.getElementsByClassName("item-bottom")[0].children[0].innerHTML.replace('R$', '').replace(",","."));
+    let dessertPrice = Number(checkDesserts.getElementsByClassName("item-bottom")[0].children[0].innerHTML.replace('R$', '').replace(",","."));
+
+    let totalPrice = dishPrice + drinkPrice + dessertPrice;
+
+    message += "Total: R$ " + totalPrice.toFixed(2);
+    let formated_message = encodeURIComponent(message);
+
+    const url = "https://wa.me/?text=" + formated_message;
+    window.open(url);
 }
 
